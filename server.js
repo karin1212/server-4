@@ -6,7 +6,7 @@ const app=new Hono();
 
 app.use('/*',serveStatic({root:'./public'}));
 
-app.get('api', asyno(c) => {
+app.get('api', async(c) => {
   const res = await fetch('https://randomuser.me/api/');
   const data = await res.json();
 
